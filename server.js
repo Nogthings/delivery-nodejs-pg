@@ -72,8 +72,13 @@ products(app, upload);
 */
 ordersDeliverySocket(io);
 
-server.listen(3000, '192.168.8.5' || 'localhost', function() {
-    console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
+//                ambiente local                 //
+// server.listen(3000, '192.168.8.5' || 'localhost', function() {
+//     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
+// });
+
+server.listen(port, function() {
+    console.log('Listening on port: ' + port )
 });
 
 
